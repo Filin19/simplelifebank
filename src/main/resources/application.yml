@@ -1,0 +1,22 @@
+server:
+  port: '8080'
+  servlet:
+    context-path: /api/bank/
+
+
+spring:
+  application:
+    name: simplelifebank
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    url: jdbc:h2:mem:myDb
+    password: password
+    initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      dll-auto: create-drop
+  h2:
+    console.enabled: true
